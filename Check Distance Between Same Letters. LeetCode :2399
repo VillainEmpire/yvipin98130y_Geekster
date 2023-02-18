@@ -1,3 +1,5 @@
+This is the simple array approach.
+
 public class Main {
     public static void main(String[] args) {
         //  String  str= "abaccb";
