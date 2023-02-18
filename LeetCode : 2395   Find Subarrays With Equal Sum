@@ -1,0 +1,25 @@
+Approach:--
+1.  First we create another array with length (nums.length-1) and then start traversing the given array till (nums.length-1).
+2. Then add sum of contiguous two elements in the new Array because(every time we need on subarray of length 2).
+3. Then sort the new Array. 
+4. Start traversing the new array till (< newArray.length-1) and check if any two contiguous elements are same. if yes then return true.
+5. if No then at the end return false.
+
+
+
+
+
+
+class Solution {
+    public boolean findSubarrays(int[] nums) {
+        int arr[] = new int[nums.length-1];
+        for(int i=0;i<nums.length-1;i++){
+            arr[i] = nums[i]+nums[i+1];
+        }
+        Arrays.sort(arr);
+        for(int i=0;i<arr.length-1;i++){
+            if(arr[i]==arr[i+1]) return true;
+        }
+        return false;
+    }   
+}
